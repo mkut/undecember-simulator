@@ -1,0 +1,21 @@
+.tier-menu,
+.page-menu {
+   width: 120px;
+}
+
+.tier-menu-item,
+.page-menu-item {
+   cursor: pointer;
+   padding: 10px 0px;
+   text-align: center;
+}
+
+.tier-menu-item.selected,
+.page-menu-item.selected {
+   background-color: #464646;
+}
+
+.tier-menu-item:hover,
+.page-menu-item:hover {
+   background-color: #909090;
+}
