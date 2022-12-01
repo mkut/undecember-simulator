@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/undecember-simulator/static/css/main.efe7d10c.css",
+    "main.js": "/undecember-simulator/static/js/main.df74014d.js",
+    "static/js/787.efd05b45.chunk.js": "/undecember-simulator/static/js/787.efd05b45.chunk.js",
+    "index.html": "/undecember-simulator/index.html",
+    "main.efe7d10c.css.map": "/undecember-simulator/static/css/main.efe7d10c.css.map",
+    "main.df74014d.js.map": "/undecember-simulator/static/js/main.df74014d.js.map",
+    "787.efd05b45.chunk.js.map": "/undecember-simulator/static/js/787.efd05b45.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efe7d10c.css",
+    "static/js/main.df74014d.js"
+  ]
+}
