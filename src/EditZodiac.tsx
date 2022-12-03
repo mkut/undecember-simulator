@@ -75,6 +75,12 @@ export default function EditZodiac() {
                   {tierSpent[i] !== 0 && `(${tierSpent[i]})`}
                </div>
             ))}
+            <div
+               className="tier-menu-item reset-button"
+               onClick={() => setZodiacSelected(initialZodiacSelected)}
+            >
+               全リセット
+            </div>
          </div>
          <div className="page-menu">
             {zodiac[tier].constellations.map((zodiacPage, i) => (
