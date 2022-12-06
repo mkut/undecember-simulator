@@ -14,6 +14,10 @@
    color: #e34161;
 }
 
+.tier-menu-item.special-button {
+   color: #41e357;
+}
+
 .tier-menu-item.selected,
 .page-menu-item.selected {
    background-color: #464646;

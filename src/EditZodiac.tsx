@@ -5,6 +5,12 @@ import { zodiac, initialZodiacSelected } from "./fixture/zodiac";
 import { activeMods, drySelectNode } from "./game/zodiac";
 import "./EditZodiac.css";
 import { printModifier } from "game/modifier";
+import {
+   setSharedUrlToClipBoard,
+   loadFromLocalStorage,
+   storeIntoLocalStorage,
+   loadFromUrl,
+} from "stored/stored";
 
 export default function EditZodiac() {
    const [zodiacSelected, setZodiacSelected] = useState(initialZodiacSelected);
@@ -12,42 +18,21 @@ export default function EditZodiac() {
    const [page, setPage] = useState(0);
 
    useEffect(() => {
-      const storedRaw: string | null = localStorage.getItem("zodiacSelected");
-      const stored: any = storedRaw && JSON.parse(storedRaw);
-      if (stored && stored.v === 1) {
-         const sanitizedStored = produce(initialZodiacSelected, (draft) => {
-            for (
-               let i = 0;
-               i < Math.min(draft.length, stored.value.length);
-               i++
-            ) {
-               for (
-                  let j = 0;
-                  j < Math.min(draft[i].length, stored.value[i].length);
-                  j++
-               ) {
-                  for (
-                     let k = 0;
-                     k <
-                     Math.min(draft[i][j].length, stored.value[i][j].length);
-                     k++
-                  ) {
-                     draft[i][j][k] = stored.value[i][j][k];
-                  }
-               }
-            }
-         });
-         setZodiacSelected(sanitizedStored);
+      const requested = loadFromUrl();
+      if (requested) {
+         setZodiacSelected(requested);
+         return;
+      }
+      const stored = loadFromLocalStorage();
+      if (stored) {
+         setZodiacSelected(stored);
+         return;
       }
    }, []);
 
    useEffect(() => {
       if (zodiacSelected !== initialZodiacSelected) {
-         const stored = {
-            v: 1,
-            value: zodiacSelected,
-         };
-         localStorage.setItem("zodiacSelected", JSON.stringify(stored));
+         storeIntoLocalStorage(zodiacSelected);
       }
    }, [zodiacSelected]);
 
@@ -80,6 +65,12 @@ export default function EditZodiac() {
                onClick={() => setZodiacSelected(initialZodiacSelected)}
             >
                全リセット
+            </div>
+            <div
+               className="tier-menu-item special-button"
+               onClick={() => setSharedUrlToClipBoard(zodiacSelected)}
+            >
+               エクスポート
             </div>
          </div>
          <div className="page-menu">

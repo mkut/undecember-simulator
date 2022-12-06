@@ -173,7 +173,7 @@ export default function EditConstellation({
             );
          });
       });
-   }, [constellation, hovering, clicked]);
+   }, [constellation, selected, hovering, clicked]);
 
    return (
       <canvas ref={canvas} width={WIDTH} height={HEIGHT} id="constellation" />
