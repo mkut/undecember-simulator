@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/undecember-simulator/static/css/main.54036698.css",
-    "main.js": "/undecember-simulator/static/js/main.d6068e79.js",
+    "main.css": "/undecember-simulator/static/css/main.45163cee.css",
+    "main.js": "/undecember-simulator/static/js/main.57b9695a.js",
     "static/js/787.efd05b45.chunk.js": "/undecember-simulator/static/js/787.efd05b45.chunk.js",
     "index.html": "/undecember-simulator/index.html",
-    "main.54036698.css.map": "/undecember-simulator/static/css/main.54036698.css.map",
-    "main.d6068e79.js.map": "/undecember-simulator/static/js/main.d6068e79.js.map",
+    "main.45163cee.css.map": "/undecember-simulator/static/css/main.45163cee.css.map",
+    "main.57b9695a.js.map": "/undecember-simulator/static/js/main.57b9695a.js.map",
     "787.efd05b45.chunk.js.map": "/undecember-simulator/static/js/787.efd05b45.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54036698.css",
-    "static/js/main.d6068e79.js"
+    "static/css/main.45163cee.css",
+    "static/js/main.57b9695a.js"
   ]
 }
